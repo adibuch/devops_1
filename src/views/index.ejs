@@ -1,25 +1,28 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home Page</title>
-    <link rel="stylesheet" href="/home_page.css">
+  <title>Student Registration</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-   
-    <header>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="log_in.ejs">Login</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-    <main>
-        <h1>Welcome to My Website</h1>
-        <p>This is the home page of my website. Please use the navigation bar above to go to the login page.</p>
-    </main>
+  <h1>Student Registration</h1>
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
+    
+    <label for="grade1">Exam1:</label>
+    <input type="number" id="grade1" required><br><br>
+    
+    <label for="grade2">Exam2:</label>
+    <input type="number" id="grade2" required><br><br>
+    
+    <label for="grade3">Exam3:</label>
+    <input type="number" id="grade3" required><br><br>
+    
+    <input type="submit" value="Register">
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>

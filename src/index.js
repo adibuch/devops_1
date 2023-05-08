@@ -1,5 +1,5 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
@@ -16,6 +16,7 @@ mongoose.connect(dbURI).then((result) => app.listen(port, () => {
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // mongoose & mongo tests
@@ -46,9 +47,19 @@ app.get('/all-blogs', (req, res) => {
 app.get('/', (req, res) => {
     res.render('index');
 });
-app.get('/log_in.ejs', (req, res) => {
-    res.render('log_in');
-});
-app.get('/about', (req, res) => {
-    res.render('about');
-});
+// Endpoint to handle the registration POST request
+app.post('/registration', (req, res) => {
+    // Access the form data sent in the request body
+    const { name, grade1, grade2, grade3 } = req.body;
+     // Log the received data
+    console.log('Received data:');
+    console.log('Name:', name);
+    console.log('Grade 1:', grade1);
+    console.log('Grade 2:', grade2);
+    console.log('Grade 3:', grade3);
+    // Perform any necessary processing or validation
+    // ...
+  
+    // Return a response indicating the registration was successful
+    res.status(200).json({ message: 'Registration successful' });
+  });
