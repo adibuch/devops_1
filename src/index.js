@@ -63,3 +63,5 @@ app.post('/registration', (req, res) => {
     // Return a response indicating the registration was successful
     res.status(200).json({ message: 'Registration successful' });
   });
+  
+  module.exports = app;
