@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.post('/registration', (req, res) => {
     // Access the form data sent in the request body
     const { name, grade1, grade2, grade3 } = req.body;
-     // Log the received data
+    // Log the received data
     console.log('Received data:');
     console.log('Name:', name);
     console.log('Grade 1:', grade1);
@@ -27,6 +27,6 @@ app.post('/registration', (req, res) => {
   
     // Return a response indicating the registration was successful
     res.status(200).json({ message: 'Registration successful' });
-  });
+});
   
-  module.exports = app;
+module.exports = app;
