@@ -1,15 +1,55 @@
+Name: Efraim
+Grade 1: 100
+Grade 2: 90
+Grade 3: 90
+
+Name: avner
+Grade 1: 100
+Grade 2: 100
+Grade 3: 100
+
 Name: adi buchris
 Grade 1: 100
 Grade 2: 100
 Grade 3: 100
 
-Name: malky
+Name: adi bus
 Grade 1: 100
 Grade 2: 100
 Grade 3: 100
 
-Name: avner
-Grade 1: 67
-Grade 2: 89
-Grade 3: 99
+Name: adi buchris
+Grade 1: 100
+Grade 2: 100
+Grade 3: 100
+
+Name: adi buchris
+Grade 1: 100
+Grade 2: 100
+Grade 3: 100
+
+Name: adi buchris
+Grade 1: 100
+Grade 2: 100
+Grade 3: 100
+
+Name: adi buchris
+Grade 1: 100
+Grade 2: 100
+Grade 3: 100
+
+Name: adi buchris
+Grade 1: 100
+Grade 2: 100
+Grade 3: 100
+
+Name: John Doe
+Grade 1: 90
+Grade 2: 85
+Grade 3: 95
+
+Name: John Doe
+Grade 1: 90
+Grade 2: undefined
+Grade 3: undefined
 
