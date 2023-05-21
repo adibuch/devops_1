@@ -7,12 +7,16 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const port = process.env.PORT || 3000;
 
-const dbURI = 'mongodb+srv://dev:0123456789@devops.x1un1tw.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://dev:0123456789@devops.x1un1tw.mongodb.net/Devops?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-.then(result => app.listen(port, () => {
-  
-}))
-.catch(err => console.log(err));
+  .then(() => {
+    app.listen(port, () => {
+      console.log('Server started');
+    });
+  })
+  .catch(err => {
+    console.log(err);
+  });
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
