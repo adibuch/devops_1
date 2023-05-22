@@ -11,7 +11,7 @@ const dbURI = 'mongodb+srv://dev:0123456789@devops.x1un1tw.mongodb.net/Devops?re
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.listen(port, () => {
-      console.log('Server started');
+      
     });
   })
   .catch(err => {
@@ -31,12 +31,6 @@ app.get('/', (req, res) => {
 app.post('/registration', async (req, res) => {
   const { name, grade1, grade2, grade3 } = req.body;
 
-  console.log('Received data:');
-  console.log('Name:', name);
-  console.log('Grade 1:', grade1);
-  console.log('Grade 2:', grade2);
-  console.log('Grade 3:', grade3);
-
   if (name === undefined || grade1 === undefined || grade2 === undefined || grade3 === undefined) {
     return res.status(400).json({ error: 'Incomplete form data' });
   }
@@ -52,7 +46,7 @@ app.post('/registration', async (req, res) => {
 
     await student.save();
 
-    console.log('Data saved to MongoDB');
+  
 
     res.status(200).json({ message: 'Registration successful' });
   } catch (err) {
