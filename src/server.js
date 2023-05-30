@@ -9,14 +9,13 @@ const port = process.env.PORT || 3000;
 
 const dbURI = 'mongodb+srv://dev:0123456789@devops.x1un1tw.mongodb.net/Devops?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    app.listen(port, () => {
-      
-    });
+  .then( async () => {
+    
   })
   .catch(err => {
     console.log(err);
   });
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
