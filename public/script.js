@@ -1,5 +1,5 @@
-// Add an event listener to the form submit event
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+// Handle the form submission
+function handleFormSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
 
   // Get the form values
@@ -20,7 +20,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     };
 
     // Send the form data to the server using an HTTP POST request with fetch()
-    fetch('/registration', {
+    fetch('/registration', { // Update the fetch endpoint to '/registration'
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -39,14 +39,16 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         }
       })
       .catch(function(error) {
-        // Handle any network or other errors
-        console.error('Error:', error);
+        
       });
   } else {
     // Display an error message to the user
-    errorMsg.textContent = 'Grade must be between 0 - 100 ';
+    errorMsg.textContent = 'Grade must be between 0 - 100';
   }
-});
+}
+
+// Add an event listener to the form submit event
+document.getElementById('registrationForm').addEventListener('submit', handleFormSubmit);
 
 // Helper function to check if a grade is within the valid range
 function isValidGrade(grade) {
@@ -56,3 +58,6 @@ function isValidGrade(grade) {
 function showMessage() {
   alert("Your details are saved.");
 }
+module.exports = {
+  handleFormSubmit,
+};
